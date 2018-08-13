@@ -4,4 +4,7 @@ src/**/*.js
 src/**/*.js.map
 test/**/*.js
 test/**/*.js.map
-/libs
+/libs/**/*.js
+/libs/**/*.mem
+/libs/**/*.wasm
+package-lock.json

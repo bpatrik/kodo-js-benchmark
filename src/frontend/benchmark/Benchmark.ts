@@ -7,16 +7,16 @@
 
 declare const KODO: any;
 
-export interface BenchmarkResult {
-  encodedBytes: number;
-  decodedBytes: number;
-  decodingTime: number;
-  encodingTime: number;
-  setupTime: number;
-  usedPackets: number;
+export interface BenchmarkResult<T = number[]> {
+  encodedBytes: T;
+  decodedBytes: T;
+  decodingTime: T;
+  encodingTime: T;
+  setupTime: T;
+  usedPackets: T;
   memory: {
-    browser: number;
-    kodoHeap: number;
+    browser: T;
+    kodoHeap: T;
   };
   rounds: number;
   settings: {
@@ -29,7 +29,7 @@ export interface BenchmarkResult {
 export class Benchmark {
 
 
-  static rounds = 2;
+  static rounds = 1000;
 
   constructor(public field: string, public symbols: number, public symbol_size: number) {
     if (!KODO.field[this.field]) {
@@ -117,8 +117,8 @@ export class Benchmark {
     const decoded_bytes = this.symbols * this.symbol_size;
     // const decoding_rate = decodedBytes / decodingTime;
     if (data_out !== data_in) {
-      console.log('data_in', data_in.length, data_in.substring(0,100)+'...');
-      console.log('data_out', data_out.length, data_out.substring(0,100)+'...');
+      console.log('data_in', data_in.length, data_in.substring(0, 100) + '...');
+      console.log('data_out', data_out.length, data_out.substring(0, 100) + '...');
       throw new Error('Decoding failed! we used ' + used_packets + ' packets, decoder rank: ' + decoder.rank() + '/' + this.symbols);
     }
     decoder.delete();
@@ -129,7 +129,7 @@ export class Benchmark {
 
     const memory = window.performance['memory'] ? window.performance['memory'].usedJSHeapSize : null;
 
-    return <BenchmarkResult>{
+    return <BenchmarkResult<number>>{
       encodedBytes: encoded_bytes,
       decodedBytes: decoded_bytes,
       decodingTime: decoding_time,
@@ -146,15 +146,15 @@ export class Benchmark {
   run(): BenchmarkResult {
 
     const stat: BenchmarkResult = {
-      encodedBytes: 0,
-      decodedBytes: 0,
-      decodingTime: 0,
-      encodingTime: 0,
-      setupTime: 0,
-      usedPackets: 0,
+      encodedBytes: [],
+      decodedBytes: [],
+      decodingTime: [],
+      encodingTime: [],
+      setupTime: [],
+      usedPackets: [],
       memory: {
-        browser: 0,
-        kodoHeap: 0
+        browser: [],
+        kodoHeap: []
       },
       rounds: Benchmark.rounds,
       settings: {
@@ -166,14 +166,14 @@ export class Benchmark {
 
     for (let i = 0; i < Benchmark.rounds; i++) {
       const tmp = this.runATest();
-      stat.encodedBytes += tmp.encodedBytes;
-      stat.decodedBytes += tmp.decodedBytes;
-      stat.encodingTime += tmp.encodingTime;
-      stat.decodingTime += tmp.decodingTime;
-      stat.usedPackets += tmp.usedPackets;
-      stat.setupTime += tmp.setupTime;
-      stat.memory.browser += tmp.memory.browser;
-      stat.memory.kodoHeap += tmp.memory.kodoHeap;
+      stat.encodedBytes.push(tmp.encodedBytes);
+      stat.decodedBytes.push(tmp.decodedBytes);
+      stat.encodingTime.push(tmp.encodingTime);
+      stat.decodingTime.push(tmp.decodingTime);
+      stat.usedPackets.push(tmp.usedPackets);
+      stat.setupTime.push(tmp.setupTime);
+      stat.memory.browser.push(tmp.memory.browser);
+      stat.memory.kodoHeap.push(tmp.memory.kodoHeap);
     }
 
 

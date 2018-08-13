@@ -26,10 +26,10 @@ const timeoutTask = new TaskScheduler();
 const runMeasurement = async (libInfo: LibInfoDTO, field, symbols) => {
 
   return new Promise((resolve, reject) => {
-    timeoutTask.schedule(()=>{
+    timeoutTask.schedule(() => {
       $('iframe').remove();
       reject('timeout');
-    },5000);
+    }, 5 * 60 * 1000);
     const iframe = document.createElement('iframe');
     iframe.style.display = 'none';
     window['onIframeReady'] = () => {
