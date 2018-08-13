@@ -49,14 +49,18 @@ For encoding the difference is not that obvious, but the memory view with WebAss
 ### Setup time
 
 Setup time is mostly constant for filed size binary, binary4 and binary8, but for binary16 it increases significantly.
-Furthermore the setup time about the half when using WebAssembly instead of asm.js. 
 ![Setup time](./plots/setup_time/per_field/setup_time_with_generation_size_32_symbols_size_1024_byte.svg)
+Furthermore the setup time about the half when using WebAssembly instead of asm.js. 
+![Setup time2](./plots/setup_time/per_generation_size/setup_time_with_binary8_symbols_size_1024_byte.svg)
+The high standard deviation occurs because the first few coder creation requires significantly more time than the rest.
 
 ### Linearly dependent packets
 
 This metric only depends on the used field and generation, not on the used compilation method.
 There is a higher chance of generating linearly dependent packets, with lower generation and field size:
 ![Liner dependency](./plots/lin_dependency/per_field/liner_dependent_packages_with_generation_size_32_symbols_size_1024_byte.svg)
+
+
 
 ## Verdict
 
