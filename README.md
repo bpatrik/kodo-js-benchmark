@@ -3,7 +3,11 @@ This project is a small benchmark testbed for the [kodo-js](https://github.com/s
 
 See benchmark results under the `results folder`.
 
-## Usage:
+## Results
+find results under the [`results/`](/results) folder
+
+
+## Usage
 #### 1) build your own libraries to benchmark 
 The system needs the build libs to be placed under `/libs/<your_build>`
 like:

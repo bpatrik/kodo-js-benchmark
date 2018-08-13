@@ -50,14 +50,14 @@ For encoding the difference is not that obvious, but the memory view with WebAss
 
 Setup time is mostly constant for filed size binary, binary4 and binary8, but for binary16 it increases significantly.
 Furthermore the setup time about the half when using WebAssembly instead of asm.js. 
-![Encoding rate](./plots/setup_time/per_field/setup_time_with_generation_size_32_symbols_size_1024_byte.svg)
+![Setup time](./plots/setup_time/per_field/setup_time_with_generation_size_32_symbols_size_1024_byte.svg)
 <img src="./plots/setup_time/per_field/setup_time_with_generation_size_32_symbols_size_1024_byte.svg">
 
 ### Linearly dependent packets
 
 This metric only depends on the used field and generation, not on the used compilation method.
 There is a higher chance of generating linearly dependent packets, with lower generation and field size:
-![Encoding rate](./plots/lin_dependency/per_field/liner_dependent_packages_with_generation_size_32_symbols_size_1024_byte.svg)
+![Liner dependency](./plots/lin_dependency/per_field/liner_dependent_packages_with_generation_size_32_symbols_size_1024_byte.svg)
 <img src="./plots/lin_dependency/per_field/liner_dependent_packages_with_generation_size_32_symbols_size_1024_byte.svg">
 
 ## Verdict
