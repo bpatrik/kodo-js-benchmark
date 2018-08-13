@@ -31,7 +31,7 @@ export class Benchmark {
 
   static rounds = 1000;
 
-  constructor(public field: string, public symbols: number, public symbol_size: number) {
+  constructor(public field: string, public symbols: number, public symbol_size: number, private useMemView = false) {
     if (!KODO.field[this.field]) {
       throw new Error('invalid filed: ' + this.field + ', available: ' + Object.keys(KODO.field));
 
@@ -84,9 +84,16 @@ export class Benchmark {
 
     const start_encoding = window.performance.now();
 
-    for (let i = 0; i < payload_count; i++) {
-      const payload = encoder.write_payload();
-      payloads.push(payload);
+    if (this.useMemView) { //for emscripten memory view, you should slice
+      for (let i = 0; i < payload_count; i++) {
+        const payload = encoder.write_payload().slice();
+        payloads.push(payload);
+      }
+    } else { //it returns with string
+      for (let i = 0; i < payload_count; i++) {
+        const payload = encoder.write_payload();
+        payloads.push(payload);
+      }
     }
 
     const encoding_time = window.performance.now() - start_encoding;

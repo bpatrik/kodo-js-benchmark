@@ -1,9 +1,0 @@
-{
-  "name": "59d0743_asm_o2_allow_memgrowth",
-  "type": 1,
-  "flags": [
-    "-O2",
-    "-s ALLOW_MEMORY_GROWTH=1"
-  ],
-  "emscripten": "1.38.10"
-}

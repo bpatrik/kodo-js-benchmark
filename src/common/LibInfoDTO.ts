@@ -8,4 +8,5 @@ export interface LibInfoDTO {
   name: string;
   type: CompilationType,
   flags: LibFlags[];
+  withMemoryView: boolean;
 }

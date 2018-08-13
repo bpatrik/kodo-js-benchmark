@@ -1,0 +1,363 @@
+{
+  "data": [
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Chrome_59d0743_wasm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "darkblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "darkblue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Chrome_59d0743_wasm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "darkblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "darkblue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Chrome_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dash",
+        "color": "darkblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "darkblue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Chrome_59d0743_wasm_o2_nodebug_memgrowth_memview",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "darkblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "darkblue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Firefox_59d0743_wasm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "royalblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "royalblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "royalblue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Firefox_59d0743_wasm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "royalblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "royalblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "royalblue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Firefox_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dash",
+        "color": "royalblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "royalblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "royalblue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "name": "Firefox_59d0743_wasm_o2_nodebug_memgrowth_memview",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "royalblue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "royalblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "royalblue"
+      }
+    }
+  ],
+  "layout": {
+    "title": "Liner dependent packages with binary16, symbols size: 1024 byte",
+    "xaxis": {
+      "zeroline": true,
+      "title": "generations size"
+    },
+    "yaxis": {
+      "range": [
+        0,
+        1.1
+      ],
+      "zeroline": true,
+      "title": "used packets / symbols [ratio]"
+    }
+  }
+}

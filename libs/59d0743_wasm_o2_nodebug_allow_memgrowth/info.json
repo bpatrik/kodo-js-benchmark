@@ -1,9 +1,0 @@
-{
-  "name": "59d0743_wasm_o2_nodebug_allow_memgrowth",
-  "type": 2,
-  "flags":[
-    "-O2",
-    "--cxx_nodebug",
-    "-s ALLOW_MEMORY_GROWTH=1"
-  ]
-}

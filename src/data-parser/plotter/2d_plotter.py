@@ -89,13 +89,12 @@ def plot(filename):
   if 'type' in data['layout']['yaxis'] and data['layout']['yaxis']['type'] == 'log':
     plt.yscale("log", nonposy='clip')
 
-  if len(data['data']) > 1:
-    leg = plt.legend()
+  lgd = plt.legend(loc=9, bbox_to_anchor=(0.5, -0.11), ncol=2)
 
   plt.grid(True)
   plt.subplots_adjust(left=0.06, right=0.995, top=0.94, bottom=0.25)
-  plt.tight_layout()
-  plt.savefig(os.path.splitext(filename)[0]+ '.svg', format='svg', dpi=200, transparent=False)
+ # plt.tight_layout()
+  plt.savefig(os.path.splitext(filename)[0]+ '.svg', format='svg', dpi=200, transparent=False,  bbox_extra_artists=(lgd,), bbox_inches='tight')
   plt.close()
   # plt.show()
 

@@ -100,7 +100,7 @@ window['run'] = async () => {
 
     await loadKodo(libInfo);
 
-    const bm = new Benchmark(field, symbols, symbol_size);
+    const bm = new Benchmark(field, symbols, symbol_size, libInfo.withMemoryView);
     const res = bm.run();
     const log: LogDTO = {
       envionment: {type: browserType, version: navigator.appVersion},

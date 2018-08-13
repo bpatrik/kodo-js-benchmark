@@ -1,4 +1,4 @@
-import {LogDTO} from '../../common/LogDTO';
+import {EnvionmentType, LogDTO} from '../../common/LogDTO';
 import {IPlotable, IPlotData} from './IPlotable';
 import {Utils} from '../../common/Utils';
 import {CompilationType} from '../../common/LibInfoDTO';
@@ -9,27 +9,40 @@ export class Renderer {
   private static getColor(log: LogDTO) {
     switch (log.lib.type) {
       case CompilationType.ASM:
-        return 'green';
+        if (log.envionment.type === EnvionmentType.Chrome) {
+          return 'darkgreen';
+        }
+        return 'limegreen';
       case CompilationType.WASM:
-        return 'blue';
+        if (log.envionment.type === EnvionmentType.Chrome) {
+          return 'darkblue';
+        }
+        return 'royalblue';
     }
   }
 
 
   private static getMarkers(log: LogDTO) {
-    switch (log.lib.type) {
-      case CompilationType.ASM:
+    switch (log.envionment.type) {
+      case EnvionmentType.Chrome:
         return 'circle';
-      case CompilationType.WASM:
+      case EnvionmentType.Firefox:
         return 'square';
     }
+    return 'triangle-up';
   }
 
   private static getLineDash(log: LogDTO) {
     if (log.lib.flags.indexOf('-O2') != -1 &&
       log.lib.flags.indexOf('--cxx_nodebug') != -1 &&
-      log.lib.flags.indexOf('-s ALLOW_MEMORY_GROWTH=1') != -1) {
+      log.lib.flags.indexOf('-s ALLOW_MEMORY_GROWTH=1') != -1 &&
+      log.lib.withMemoryView === true) {
       return 'solid';
+    }
+    if (log.lib.flags.indexOf('-O2') != -1 &&
+      log.lib.flags.indexOf('--cxx_nodebug') != -1 &&
+      log.lib.flags.indexOf('-s ALLOW_MEMORY_GROWTH=1') != -1) {
+      return 'dash';
     }
     if (log.lib.flags.indexOf('-O2') != -1 &&
       log.lib.flags.indexOf('-s ALLOW_MEMORY_GROWTH=1') != -1) {
@@ -38,8 +51,7 @@ export class Renderer {
     if (log.lib.flags.indexOf('-O2') != -1) {
       return 'dot';
     }
-    console.log('longdash');
-    return 'longdash';
+    return 'dot';
   }
 
   public static renderLine(input: {
