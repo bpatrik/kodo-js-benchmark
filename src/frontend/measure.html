@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Measuremant Iframe</title>
+</head>
+<body>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.19/system.js"
+        integrity="sha256-HCJlhCZ21EKx0Wo6wCF+rbeBHlVlOSJccd4zTQe2TNw=" crossorigin="anonymous"></script>
+
+
+<script>
+  System.config({
+    map: {
+      "kodo": "@empty",
+      "fs": "@empty",
+      "optimist": "@empty",
+      "path": "@empty",
+      "typeconfig": "../../../node_modules/typeconfig/index.js"
+    },
+    packages: {
+      './../../': {
+        defaultJSExtensions: 'js'
+      }
+    },
+    transpiler: false,
+    meta: {'*': {authorization: true}}
+  });
+  System.import('./measure_main').then(null, console.error.bind(console));
+</script>
+
+
+</body>
+</html>
