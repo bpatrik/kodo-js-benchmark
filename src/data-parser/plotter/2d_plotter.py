@@ -94,7 +94,7 @@ def plot(filename):
   plt.grid(True)
   plt.subplots_adjust(left=0.06, right=0.995, top=0.94, bottom=0.25)
   plt.tight_layout()
-  plt.savefig(filename + '.png', format='png', dpi=200, transparent=False)
+  plt.savefig(filename + '.svg', format='svg', dpi=200, transparent=False)
   plt.close()
   # plt.show()
 

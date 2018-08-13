@@ -62,7 +62,7 @@ export class PlotsGenerator {
           titles: {
             x: this.xAxis,
             y: 'time [ms]',
-            main: 'Setup time with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size
+            main: 'Setup time with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
         }));
     }
@@ -90,7 +90,7 @@ export class PlotsGenerator {
           titles: {
             x: this.xAxis,
             y: 'memory [MB]',
-            main: 'Browser memory usage with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size
+            main: 'Browser memory usage with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
         }));
     }
@@ -117,7 +117,7 @@ export class PlotsGenerator {
           titles: {
             x: 'generation size',
             y: 'used packets / symbols [ratio]',
-            main: 'Liner dependent packages with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size
+            main: 'Liner dependent packages with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
         }));
     }
@@ -144,7 +144,7 @@ export class PlotsGenerator {
           titles: {
             x: 'generation size',
             y: 'memory [MB]',
-            main: 'Kodo Heap usage with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size
+            main: 'Kodo Heap usage with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
         }));
     }
@@ -174,7 +174,7 @@ export class PlotsGenerator {
           titles: {
             x: 'generation size',
             y: 'Decoding rate [MB/s]',
-            main: 'Decoding rate with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size
+            main: 'Decoding rate with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
         }));
     }
@@ -202,7 +202,7 @@ export class PlotsGenerator {
           titles: {
             x: 'generation size',
             y: 'Encoding rate [MB/s]',
-            main: 'Encoding rate with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size
+            main: 'Encoding rate with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
         }));
     }
