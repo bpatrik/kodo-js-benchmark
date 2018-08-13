@@ -3,6 +3,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib import colors as mcolors
 import glob
+import os
 
 
 def plot(filename):
@@ -94,12 +95,12 @@ def plot(filename):
   plt.grid(True)
   plt.subplots_adjust(left=0.06, right=0.995, top=0.94, bottom=0.25)
   plt.tight_layout()
-  plt.savefig(filename + '.svg', format='svg', dpi=200, transparent=False)
+  plt.savefig(os.path.splitext(filename)[0]+ '.svg', format='svg', dpi=200, transparent=False)
   plt.close()
   # plt.show()
 
 
-files = glob.glob("./../../../results/plots/**/**/*.scatter.json")
+files = glob.glob("./../../../results/plots/**/**/*.json")
 for index, filename in enumerate(files):
   print(index, '/', len(files), filename)
   plot(filename)

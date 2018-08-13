@@ -115,7 +115,7 @@ export class PlotsGenerator {
             return EnvionmentType[l.envionment.type] + '_' + l.lib.name;
           },
           titles: {
-            x: 'generation size',
+            x: this.xAxis,
             y: 'used packets / symbols [ratio]',
             main: 'Liner dependent packages with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
@@ -142,7 +142,7 @@ export class PlotsGenerator {
             return EnvionmentType[l.envionment.type] + '_' + l.lib.name;
           },
           titles: {
-            x: 'generation size',
+            x: this.xAxis,
             y: 'memory [MB]',
             main: 'Kodo Heap usage with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
@@ -172,7 +172,7 @@ export class PlotsGenerator {
             return EnvionmentType[l.envionment.type] + '_' + l.lib.name;
           },
           titles: {
-            x: 'generation size',
+            x: this.xAxis,
             y: 'Decoding rate [MB/s]',
             main: 'Decoding rate with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }
@@ -200,7 +200,7 @@ export class PlotsGenerator {
             return EnvionmentType[l.envionment.type] + '_' + l.lib.name;
           },
           titles: {
-            x: 'generation size',
+            x: this.xAxis,
             y: 'Encoding rate [MB/s]',
             main: 'Encoding rate with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size + ' byte'
           }

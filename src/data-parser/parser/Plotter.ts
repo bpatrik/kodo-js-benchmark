@@ -20,13 +20,10 @@ export class Plotter {
       if (!fs.existsSync(outDir)) {
         mkdirp.sync(outDir);
       }
-      let type = plotable.data[0].type;
-      if (Array.isArray(plotable.data[0])) {
-        type = plotable.data[0][0].type;
-      }
       fs.writeFile(path.join(outDir, plotable.layout.title.toLowerCase()
-          .replace(new RegExp('[!@#$%^&*(),?":{}|<>\\\\/ ]', 'g'), '_') +
-        '.' + type + '.json'), JSON.stringify(plotable, null, 2), (err) => {
+          .replace(new RegExp('[ ]', 'g'), '_')
+          .replace(new RegExp('[!@#$%^&*(),?":{}|<>\\\\/ ]', 'g'), '') +
+        '.json'), JSON.stringify(plotable, null, 2), (err) => {
         if (err) {
           return reject(err);
         }
