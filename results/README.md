@@ -36,14 +36,14 @@ Only those results are included in our plots that we could 1000 times reproduce.
 Firefox performs significantly better with WebAssembly, but WebAssembly is generally performs better than asm.js
 
 ![Decoding rate](./plots/decoding_rate/per_field/decoding_rate_with_generation_size_32_symbols_size_1024_byte.svg)
-<img src="./plots/decoding_rate/per_field/decoding_rate_with_generation_size_32_symbols_size_1024_byte.svg">
+
 
 
 ### Encoding rate
 For encoding the difference is not that obvious, but the memory view with WebAssembly helps:
 
 ![Encoding rate](./plots/encoding_rate/per_field/encoding_rate_with_generation_size_32_symbols_size_1024_byte.svg)
-<img src="./plots/encoding_rate/per_field/encoding_rate_with_generation_size_32_symbols_size_1024_byte.svg">
+
 
 
 ### Setup time
@@ -51,14 +51,12 @@ For encoding the difference is not that obvious, but the memory view with WebAss
 Setup time is mostly constant for filed size binary, binary4 and binary8, but for binary16 it increases significantly.
 Furthermore the setup time about the half when using WebAssembly instead of asm.js. 
 ![Setup time](./plots/setup_time/per_field/setup_time_with_generation_size_32_symbols_size_1024_byte.svg)
-<img src="./plots/setup_time/per_field/setup_time_with_generation_size_32_symbols_size_1024_byte.svg">
 
 ### Linearly dependent packets
 
 This metric only depends on the used field and generation, not on the used compilation method.
 There is a higher chance of generating linearly dependent packets, with lower generation and field size:
 ![Liner dependency](./plots/lin_dependency/per_field/liner_dependent_packages_with_generation_size_32_symbols_size_1024_byte.svg)
-<img src="./plots/lin_dependency/per_field/liner_dependent_packages_with_generation_size_32_symbols_size_1024_byte.svg">
 
 ## Verdict
 

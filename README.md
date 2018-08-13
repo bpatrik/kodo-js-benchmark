@@ -1,10 +1,10 @@
 # kodo-js-benchmark
 This project is a small benchmark testbed for the [kodo-js](https://github.com/steinwurf/kodo-js) lib
 
-See benchmark results under the `results folder`.
+
 
 ## Results
-find results under the [`results/`](/results) folder
+See benchmark  results under the [`results/`](/results) folder.
 
 
 ## Usage
