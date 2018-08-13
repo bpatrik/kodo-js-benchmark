@@ -44,7 +44,7 @@ export class Server {
       const list: LibInfoDTO[] = fs.readdirSync(ProjectPath.LibsFolder).map(name => path.join(ProjectPath.LibsFolder, name)).filter(isDirectory).map(s => {
         return require(s + '/info.json');
       });
-      return res.send(list.filter(li => li.withMemoryView === true));
+      return res.send(list);
     });
 
     const fileLogger = new StatisticFileLogger();
