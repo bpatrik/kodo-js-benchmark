@@ -8,7 +8,7 @@ export class PlotsGenerator {
 
 
   xFn;
-  xAxis:string;
+  xAxis: string;
   filteredLogs: LogDTO[][];
   names: string[];
 
@@ -21,7 +21,7 @@ export class PlotsGenerator {
     this.xFn = (l: LogDTO) => {
       return l.results.settings.symbols;
     };
-    this.xAxis = "generations size";
+    this.xAxis = 'generations size';
     const fields = Utils.Set.getUnique(this.logs.map(l => l.results.settings.field));
     this.names = fields;
     this.filteredLogs = fields.map(f => this.logs.filter(l => l.results.settings.field === f));
@@ -30,14 +30,14 @@ export class PlotsGenerator {
   perField() {
     this.xFn = (l: LogDTO) => {
       const ret = l.results.settings.field.match(/\d+$/);
-      if(ret){
-        return parseInt(ret[0],10);
+      if (ret) {
+        return parseInt(ret[0], 10);
       }
       return 2;
     };
-    this.xAxis = "filed size";
+    this.xAxis = 'filed size';
     const symbols = Utils.Set.getUnique(this.logs.map(l => l.results.settings.symbols));
-    this.names = symbols.map(v => 'symbols: ' + v);
+    this.names = symbols.map(v => 'generation size: ' + v);
     this.filteredLogs = symbols.map(s => this.logs.filter(l => l.results.settings.symbols === s));
   }
 
@@ -66,7 +66,7 @@ export class PlotsGenerator {
           }
         }));
     }
-    return plts;
+    return plts.filter(plt => plt.data.length > 0);
   }
 
 
@@ -88,13 +88,13 @@ export class PlotsGenerator {
             return EnvionmentType[l.envionment.type] + '_' + l.lib.name;
           },
           titles: {
-            x: 'generation size',
+            x: this.xAxis,
             y: 'memory [MB]',
             main: 'Browser memory usage with ' + this.names[i] + ', symbols size: ' + logs[0].results.settings.symbol_size
           }
         }));
     }
-    return plts;
+    return plts.filter(plt => plt.data.length > 0);
   }
 
   renderLindDepencency(): IPlotable[] {
@@ -121,7 +121,7 @@ export class PlotsGenerator {
           }
         }));
     }
-    return plts;
+    return plts.filter(plt => plt.data.length > 0);
   }
 
   renderKODOHeap(): IPlotable[] {
@@ -148,21 +148,22 @@ export class PlotsGenerator {
           }
         }));
     }
-    return plts;
+    return plts.filter(plt => plt.data.length > 0);
   }
 
 
   renderDecodingRate(): IPlotable[] {
     console.log('generating renderDecodingRate');
-    const plts = [];
+    const plts: IPlotable[] = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];
       logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
+
       plts.push(Renderer.renderLine(
         {
           logs: logs,
           yFn: (l: LogDTO) => {
-            const decodingSpeed = l.results.decodedBytes.map((v, i) => v / 1024 / l.results.decodingTime[i]);
+            const decodingSpeed = l.results.decodingTime.filter(v => v > 0).map((v, i) => l.results.decodedBytes[i] / 1024 / l.results.decodingTime[i]);
             const ds = DataStatisticUtils.fromArray(decodingSpeed);
             return {value: ds.mean, error: ds.stdDev};
           },
@@ -177,7 +178,7 @@ export class PlotsGenerator {
           }
         }));
     }
-    return plts;
+    return plts.filter(plt => plt.data.length > 0);
   }
 
   renderEncodingRate(): IPlotable[] {
@@ -190,7 +191,7 @@ export class PlotsGenerator {
         {
           logs: logs,
           yFn: (l: LogDTO) => {
-            const decodingSpeed = l.results.encodedBytes.map((v, i) => v / 1024 / l.results.encodingTime[i]);
+            const decodingSpeed = l.results.encodingTime.filter(v => v > 0).map((v, i) => l.results.encodedBytes[i] / 1024 / l.results.encodingTime[i]);
             const ds = DataStatisticUtils.fromArray(decodingSpeed);
             return {value: ds.mean, error: ds.stdDev};
           },
@@ -205,7 +206,7 @@ export class PlotsGenerator {
           }
         }));
     }
-    return plts;
+    return plts.filter(plt => plt.data.length > 0);
   }
 
 }

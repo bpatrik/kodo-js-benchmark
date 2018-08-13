@@ -1,0 +1,232 @@
+{
+  "data": [
+    {
+      "x": [
+        4,
+        8,
+        2
+      ],
+      "y": [
+        19.550323486328125,
+        19.550323486328125,
+        19.550323486328125
+      ],
+      "name": "Chrome_59d0743_asm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        19.550323486328125,
+        19.550323486328125,
+        19.550323486328125
+      ],
+      "name": "Chrome_59d0743_asm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        19.550323486328125,
+        19.550323486328125,
+        19.550323486328125
+      ],
+      "name": "Chrome_59d0743_asm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        4,
+        2,
+        8,
+        16
+      ],
+      "y": [
+        19.550323486328125,
+        19.550323486328125,
+        19.550323486328125,
+        19.550323486328125
+      ],
+      "name": "Chrome_59d0743_wasm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16
+      ],
+      "y": [
+        19.550323486328125,
+        19.550323486328125,
+        242.2332763671875,
+        242.2332763671875
+      ],
+      "name": "Chrome_59d0743_wasm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16
+      ],
+      "y": [
+        242.2332763671875,
+        242.2332763671875,
+        242.2332763671875,
+        242.2332763671875
+      ],
+      "name": "Chrome_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    }
+  ],
+  "layout": {
+    "title": "Browser memory usage with generation size: 32, symbols size: 1024",
+    "xaxis": {
+      "zeroline": true,
+      "title": "filed size"
+    },
+    "yaxis": {
+      "range": [
+        0,
+        266.45660400390625
+      ],
+      "zeroline": true,
+      "title": "memory [MB]"
+    }
+  }
+}

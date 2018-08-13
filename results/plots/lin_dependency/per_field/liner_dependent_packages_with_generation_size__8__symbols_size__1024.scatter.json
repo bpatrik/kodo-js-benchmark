@@ -1,0 +1,232 @@
+{
+  "data": [
+    {
+      "x": [
+        2,
+        8,
+        4
+      ],
+      "y": [
+        1.19575,
+        1.000625,
+        1.00975
+      ],
+      "name": "Chrome_59d0743_asm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.2072002352797888,
+          0.008816709987291177,
+          0.035336772631353874
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        1.190875,
+        1.008375,
+        1.00125
+      ],
+      "name": "Chrome_59d0743_asm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.19410334715042982,
+          0.0336598332586482,
+          0.012437342963832749
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        1.19175,
+        1.007375,
+        1.000375
+      ],
+      "name": "Chrome_59d0743_asm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.1964864817232987,
+          0.031003780011476002,
+          0.006836254456937658
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        4,
+        2,
+        8,
+        16
+      ],
+      "y": [
+        1.007625,
+        1.193125,
+        1.0005,
+        1
+      ],
+      "name": "Chrome_59d0743_wasm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.032422744717250575,
+          0.20294607504211554,
+          0.00788986691902975,
+          0
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16
+      ],
+      "y": [
+        1.18675,
+        1.009875,
+        1.00075,
+        1
+      ],
+      "name": "Chrome_59d0743_wasm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.1958939445210094,
+          0.03552266002145676,
+          0.009653367288153912,
+          0
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16
+      ],
+      "y": [
+        1.186125,
+        1.008875,
+        1.000625,
+        1
+      ],
+      "name": "Chrome_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.2016292621992155,
+          0.03621959932136191,
+          0.008816709987291177,
+          0
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    }
+  ],
+  "layout": {
+    "title": "Liner dependent packages with generation size: 8, symbols size: 1024",
+    "xaxis": {
+      "zeroline": true,
+      "title": "generation size"
+    },
+    "yaxis": {
+      "range": [
+        0,
+        1.5432452588077679
+      ],
+      "zeroline": true,
+      "title": "used packets / symbols [ratio]"
+    }
+  }
+}

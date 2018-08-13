@@ -59,6 +59,7 @@ const run = async () => {
   console.log(libs);
 
 
+  const start = window.performance.now();
   const fields = ['binary', 'binary4', 'binary8', 'binary16'];
 
   const symbols = [2, 4, 8, 16, 32, 64];
@@ -68,8 +69,11 @@ const run = async () => {
 
     for (let j = 0; j < fields.length; j++) {
       for (let k = 0; k < symbols.length; k++) {
+        const d = window.performance.now() - start;
+        const all = (libs.length * fields.length * symbols.length);
+        const done = (i * fields.length * symbols.length + j * symbols.length + k + 1);
         setStatus('running: ' + libs[i].name + ', ' + fields[j] + ' with ' + symbols[k] + ' symbols ' +
-          '(' + (i * fields.length * symbols.length + j * symbols.length + k + 1) + '/' + (libs.length * fields.length * symbols.length) + ')');
+          '(' + done + '/' + all + ') ellapsed.:' + (d / 1000).toFixed(0) + 's, left: ' + (d / done * all / 1000).toFixed(0) + 's');
         try {
           await runMeasurement(libs[i], fields[j], symbols[k]);
         } catch (err) {

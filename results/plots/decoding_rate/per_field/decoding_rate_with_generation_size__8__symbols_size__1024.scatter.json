@@ -1,0 +1,232 @@
+{
+  "data": [
+    {
+      "x": [
+        4,
+        8,
+        2
+      ],
+      "y": [
+        13.300864479074471,
+        14.80382716907357,
+        21.442855586550163
+      ],
+      "name": "Chrome_59d0743_asm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          2.9506866708332264,
+          3.896613883059463,
+          6.416773955048369
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        18.526113013325023,
+        11.574526263924602,
+        13.300860276434628
+      ],
+      "name": "Chrome_59d0743_asm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          5.72996176595507,
+          3.0578135730695797,
+          3.680537888865486
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        21.730717204318957,
+        13.092512342490936,
+        16.065071026748477
+      ],
+      "name": "Chrome_59d0743_asm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "green",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "green",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          6.17851014304679,
+          2.99839578300342,
+          3.8986247029980845
+        ],
+        "visible": true,
+        "color": "green"
+      }
+    },
+    {
+      "x": [
+        4,
+        2,
+        8,
+        16
+      ],
+      "y": [
+        15.376159618449304,
+        24.814309523226775,
+        18.899553215467467,
+        13.854678321886105
+      ],
+      "name": "Chrome_59d0743_wasm_o2",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          2.756785556973613,
+          6.170541004772143,
+          4.050565424409314,
+          2.6859187672469957
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16
+      ],
+      "y": [
+        24.992906832670375,
+        15.526881676962908,
+        18.769280236296005,
+        15.861939020232025
+      ],
+      "name": "Chrome_59d0743_wasm_o2_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "dashdot",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          6.424327613682749,
+          2.724392536826393,
+          3.915664651396567,
+          3.026455235537228
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16
+      ],
+      "y": [
+        25.053806240054207,
+        15.426871350713022,
+        16.568210381674497,
+        16.20652014635874
+      ],
+      "name": "Chrome_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "blue",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "blue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          5.860410174770176,
+          2.950902437437757,
+          4.276035019443006,
+          3.016263415337887
+        ],
+        "visible": true,
+        "color": "blue"
+      }
+    }
+  ],
+  "layout": {
+    "title": "Decoding rate with generation size: 8, symbols size: 1024",
+    "xaxis": {
+      "zeroline": true,
+      "title": "generation size"
+    },
+    "yaxis": {
+      "range": [
+        0,
+        34.55895789098844
+      ],
+      "zeroline": true,
+      "title": "Decoding rate [MB/s]"
+    }
+  }
+}

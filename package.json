@@ -2,9 +2,10 @@
   "name": "kodo-js-benchmark",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/backend/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "src/backend/index.js",
+    "install": "tsc"
   },
   "repository": {
     "type": "git",

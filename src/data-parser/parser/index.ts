@@ -4,7 +4,7 @@ import * as path from 'path';
 import {ProjectPath} from '../../backend/ProjectPath';
 import {PlotsGenerator} from './PlotsGenerator';
 
-const results = DataLoader.loadResult('log_20180813-131926.jsonx');
+const results = DataLoader.loadResult('results.jsonx');
 
 
 const plotsGenerator = new PlotsGenerator(results);
@@ -24,12 +24,12 @@ const plotAllToJSON = async (rendered, subPath) => {
 
 const run = async () => {
   plotsGenerator.perSymbols();
-  await plotAllToJSON(plotsGenerator.renderSetupTime(), path.join('setup_time', 'per_symbol'));
-  await plotAllToJSON(plotsGenerator.renderDecodingRate(), path.join('decoding_rate', 'per_symbol'));
-  await plotAllToJSON(plotsGenerator.renderEncodingRate(), path.join('encoding_rate', 'per_symbol'));
-  await plotAllToJSON(plotsGenerator.renderLindDepencency(), path.join('lin_dependency', 'per_symbol'));
-  await plotAllToJSON(plotsGenerator.renderMemoryUsage(), path.join('memory_usage', 'per_symbol'));
-  await plotAllToJSON(plotsGenerator.renderKODOHeap(), path.join('kodo_heap', 'per_symbol'));
+  await plotAllToJSON(plotsGenerator.renderSetupTime(), path.join('setup_time', 'per_generation_size'));
+  await plotAllToJSON(plotsGenerator.renderDecodingRate(), path.join('decoding_rate', 'per_generation_size'));
+  await plotAllToJSON(plotsGenerator.renderEncodingRate(), path.join('encoding_rate', 'per_generation_size'));
+  await plotAllToJSON(plotsGenerator.renderLindDepencency(), path.join('lin_dependency', 'per_generation_size'));
+  await plotAllToJSON(plotsGenerator.renderMemoryUsage(), path.join('memory_usage', 'per_generation_size'));
+  await plotAllToJSON(plotsGenerator.renderKODOHeap(), path.join('kodo_heap', 'per_generation_size'));
   plotsGenerator.perField();
   await plotAllToJSON(plotsGenerator.renderSetupTime(), path.join('setup_time', 'per_field'));
   await plotAllToJSON(plotsGenerator.renderDecodingRate(), path.join('decoding_rate', 'per_field'));

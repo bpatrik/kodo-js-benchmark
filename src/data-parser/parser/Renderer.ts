@@ -15,6 +15,16 @@ export class Renderer {
     }
   }
 
+
+  private static getMarkers(log: LogDTO) {
+    switch (log.lib.type) {
+      case CompilationType.ASM:
+        return 'circle';
+      case CompilationType.WASM:
+        return 'square';
+    }
+  }
+
   private static getLineDash(log: LogDTO) {
     if (log.lib.flags.indexOf('-O2') != -1 &&
       log.lib.flags.indexOf('--cxx_nodebug') != -1 &&
@@ -43,6 +53,10 @@ export class Renderer {
     const hash: { [key: string]: IPlotData } = {};
     for (let i = 0; i < input.logs.length; i++) {
       const name = input.name(input.logs[i]);
+      const v = input.yFn(input.logs[i]);
+      if (v.value === null || v.value === Infinity) {
+        continue;
+      }
       hash[name] = hash[name] || {
         x: [],
         y: [],
@@ -54,14 +68,14 @@ export class Renderer {
           width: 4
         },
         marker: {
-          //  symbol: this.getMarkers(name),
+          symbol: this.getMarkers(input.logs[i]),
           color: this.getColor(input.logs[i]),
           size: 10
         }
       };
 
+
       hash[name].x.push(input.xFn(input.logs[i]));
-      const v = input.yFn(input.logs[i]);
       hash[name].y.push(v.value);
 
       if (!hash[name].error_y) {
@@ -95,42 +109,42 @@ export class Renderer {
         }
       }
     };
-/*
-    // remove holes
-    for (let i = 0; i < ret.data.length; i++) {
-      for (let j = 0; j < ret.data.length; j++) {
-        if (i === j) {
-          continue;
-        }
-        let k1 = 0;
-        let k2 = 0;
-        while (k1 < ret.data[i].x.length && k2 < ret.data[j].x.length) {
-          if (ret.data[i].x[k1] !== ret.data[j].x[k2]) {
-            if (ret.data[i].x.indexOf(ret.data[j].x[k2]) === -1) {
-              ret.data[j].x.splice(k2, 1);
-              ret.data[j].y.splice(k2, 1);
-              ret.data[j].error_y.array.splice(k2, 1);
-              k2--;
-            } else {
-              ret.data[i].x.splice(k1, 1);
-              ret.data[i].y.splice(k1, 1);
-              ret.data[i].error_y.array.splice(k1, 1);
-              k1--;
+    /*
+        // remove holes
+        for (let i = 0; i < ret.data.length; i++) {
+          for (let j = 0; j < ret.data.length; j++) {
+            if (i === j) {
+              continue;
+            }
+            let k1 = 0;
+            let k2 = 0;
+            while (k1 < ret.data[i].x.length && k2 < ret.data[j].x.length) {
+              if (ret.data[i].x[k1] !== ret.data[j].x[k2]) {
+                if (ret.data[i].x.indexOf(ret.data[j].x[k2]) === -1) {
+                  ret.data[j].x.splice(k2, 1);
+                  ret.data[j].y.splice(k2, 1);
+                  ret.data[j].error_y.array.splice(k2, 1);
+                  k2--;
+                } else {
+                  ret.data[i].x.splice(k1, 1);
+                  ret.data[i].y.splice(k1, 1);
+                  ret.data[i].error_y.array.splice(k1, 1);
+                  k1--;
+                }
+              }
+              k1++;
+              k2++;
             }
           }
-          k1++;
-          k2++;
         }
-      }
-    }
-    ret.data.forEach(d => {
-      if (d.y.length !== d.x.length) {
-        throw new Error('y length mismatch, at' + input.titles.main);
-      }
-      if (d.y.length !== d.error_y.array.length) {
-        throw new Error('error_y length mismatch, at' + input.titles.main);
-      }
-    });*/
+        ret.data.forEach(d => {
+          if (d.y.length !== d.x.length) {
+            throw new Error('y length mismatch, at' + input.titles.main);
+          }
+          if (d.y.length !== d.error_y.array.length) {
+            throw new Error('error_y length mismatch, at' + input.titles.main);
+          }
+        });*/
     return ret;
   }
 
