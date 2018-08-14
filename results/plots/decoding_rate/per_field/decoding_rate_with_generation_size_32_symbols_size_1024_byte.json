@@ -291,6 +291,40 @@
         8
       ],
       "y": [
+        16.20550285626622,
+        6.28679206856902,
+        8.660203311060805
+      ],
+      "name": "Chrome_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "darkgreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkgreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          1.246512886251187,
+          0.33100466130848505,
+          0.900663930282305
+        ],
+        "visible": true,
+        "color": "darkgreen"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
         13.353563292847516,
         5.611354856127229,
         7.280942816660508
@@ -354,13 +388,13 @@
     },
     {
       "x": [
-        4,
         2,
+        4,
         8
       ],
       "y": [
-        5.658442046993108,
         13.900901428073846,
+        5.658442046993108,
         7.2140474323063035
       ],
       "name": "Firefox_59d0743_asm_o2_nodebug_allow_memgrowth",
@@ -378,8 +412,8 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.9734485552675759,
           5.190746433506915,
+          0.9734485552675759,
           1.4192479740590456
         ],
         "visible": true,
@@ -554,6 +588,37 @@
         ],
         "visible": true,
         "color": "royalblue"
+      }
+    },
+    {
+      "x": [
+        4,
+        8
+      ],
+      "y": [
+        9.687378932179008,
+        13.77790476190477
+      ],
+      "name": "Firefox_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "limegreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "limegreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          2.2184156705073943,
+          4.770130966983684
+        ],
+        "visible": true,
+        "color": "limegreen"
       }
     }
   ],

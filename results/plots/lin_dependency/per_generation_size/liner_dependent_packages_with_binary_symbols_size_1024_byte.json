@@ -354,6 +354,49 @@
         64
       ],
       "y": [
+        1.668,
+        1.38075,
+        1.199125,
+        1.1059375,
+        1.049,
+        1.02515625
+      ],
+      "name": "Chrome_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "darkgreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkgreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.7669915253769088,
+          0.40058324665417594,
+          0.20036494048360826,
+          0.1062495404401826,
+          0.047735599922908815,
+          0.025135861302877656
+        ],
+        "visible": true,
+        "color": "darkgreen"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
         1.2395,
         1.29325,
         1.198,
@@ -687,6 +730,49 @@
         "visible": true,
         "color": "royalblue"
       }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        1.66,
+        1.377,
+        1.2,
+        1.1026875,
+        1.05134375,
+        1.0239375
+      ],
+      "name": "Firefox_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "limegreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "limegreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.7977468270071637,
+          0.3944882761249059,
+          0.21469455046647057,
+          0.11038906691221718,
+          0.05013215932350696,
+          0.025802434478164982
+        ],
+        "visible": true,
+        "color": "limegreen"
+      }
     }
   ],
   "layout": {
@@ -698,7 +784,7 @@
     "yaxis": {
       "range": [
         0,
-        1.9162544057087185
+        2.7035215097078797
       ],
       "zeroline": true,
       "title": "used packets / symbols [ratio]"

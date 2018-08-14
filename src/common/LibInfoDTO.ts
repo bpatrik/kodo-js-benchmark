@@ -9,4 +9,5 @@ export interface LibInfoDTO {
   type: CompilationType,
   flags: LibFlags[];
   withMemoryView: boolean;
+  emscripten: string;
 }

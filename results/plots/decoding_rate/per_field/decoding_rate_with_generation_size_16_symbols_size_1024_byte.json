@@ -283,6 +283,40 @@
         "visible": true,
         "color": "darkblue"
       }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        19.486841116037407,
+        10.176703378798129,
+        13.303097237022127
+      ],
+      "name": "Chrome_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "darkgreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkgreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          2.938790749802851,
+          0.9881463916083458,
+          1.7197901717633606
+        ],
+        "visible": true,
+        "color": "darkgreen"
+      }
     }
   ],
   "layout": {

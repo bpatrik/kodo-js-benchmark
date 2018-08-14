@@ -291,6 +291,40 @@
         8
       ],
       "y": [
+        1.38075,
+        1.02375,
+        1.00125
+      ],
+      "name": "Chrome_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "darkgreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkgreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.40058324665417594,
+          0.0813845040532902,
+          0.017633419974582353
+        ],
+        "visible": true,
+        "color": "darkgreen"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
         1.29325,
         1.01625,
         1.00075
@@ -354,13 +388,13 @@
     },
     {
       "x": [
-        4,
         2,
+        4,
         8
       ],
       "y": [
-        1.0175,
         1.29275,
+        1.0175,
         1.00075
       ],
       "name": "Firefox_59d0743_asm_o2_nodebug_allow_memgrowth",
@@ -378,8 +412,8 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.06941721688457413,
           0.3489053417475845,
+          0.06941721688457413,
           0.013672508913875316
         ],
         "visible": true,
@@ -422,14 +456,14 @@
     },
     {
       "x": [
-        2,
         4,
+        2,
         8,
         16
       ],
       "y": [
-        1.30125,
         1.0175,
+        1.30125,
         1.00075,
         1
       ],
@@ -448,8 +482,8 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.3459565543532878,
           0.07031180555212617,
+          0.3459565543532878,
           0.013672508913875316,
           0
         ],
@@ -567,6 +601,40 @@
         "visible": true,
         "color": "royalblue"
       }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        1.377,
+        1.01925,
+        1.0015
+      ],
+      "name": "Firefox_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "limegreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "limegreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.3944882761249059,
+          0.07291733333028573,
+          0.019306734576307823
+        ],
+        "visible": true,
+        "color": "limegreen"
+      }
     }
   ],
   "layout": {
@@ -578,7 +646,7 @@
     "yaxis": {
       "range": [
         0,
-        1.8882990626418867
+        1.9594665713195936
       ],
       "zeroline": true,
       "title": "used packets / symbols [ratio]"

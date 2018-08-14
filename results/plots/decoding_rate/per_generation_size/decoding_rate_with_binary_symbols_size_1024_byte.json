@@ -301,6 +301,43 @@
     },
     {
       "x": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "y": [
+        21.986125823169537,
+        19.486841116037407,
+        16.20550285626622,
+        10.536873736056208
+      ],
+      "name": "Chrome_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "darkgreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkgreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          4.677822291323847,
+          2.938790749802851,
+          1.246512886251187,
+          0.8288420195638369
+        ],
+        "visible": true,
+        "color": "darkgreen"
+      }
+    },
+    {
+      "x": [
         32,
         64
       ],
@@ -533,6 +570,34 @@
         ],
         "visible": true,
         "color": "royalblue"
+      }
+    },
+    {
+      "x": [
+        64
+      ],
+      "y": [
+        15.283619251336985
+      ],
+      "name": "Firefox_9218964_asm_o2_nodebug",
+      "type": "scatter",
+      "line": {
+        "dash": "dot",
+        "color": "limegreen",
+        "width": 4
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "limegreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          2.6892698203593848
+        ],
+        "visible": true,
+        "color": "limegreen"
       }
     }
   ],

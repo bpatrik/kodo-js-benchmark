@@ -1,6 +1,8 @@
 # Results
 
 We used [kodo-js commit: 59d0743](https://github.com/steinwurf/kodo-js/tree/59d07433990963bd6c2acba96d95a14cff4e00f1) with emscripten v1.38.10 to obtain these results.
+We also had an older kodo commit:9218964 version built with emscripten v1.37.37.
+
 See all results in the `plots/` folder.
 
 1) We used a combination following flags for build `-O2`, `--cxx_nodebug`,  `-s ALLOW_MEMORY_GROWTH=1` and `-s WASM=0`.
@@ -67,5 +69,7 @@ There is a higher chance of generating linearly dependent packets, with lower ge
 WebAssembly seems to be a good choice, while using memory view can further improve the performance.
 An important note, that using memory view might lead to unexpected behaviour (also depending on the current bug level of emscripten),
 since one can directly access the memory of the compiled c++ binary.  
-
-
+We found that using multiple encoder and decoder factories whit calling `encoder.delete()` `decoder.delete()` causes instability.
+The results (or the lack of data) also show that using `binary16` had the most errors.
+An nteresting outcome is that our older `kodo` built performs reasonably well in terms of coding speed, but the setup time is significantly longer.
+Further investigation is required to see if its the results of the new `kodo` or the new `emscripten`.

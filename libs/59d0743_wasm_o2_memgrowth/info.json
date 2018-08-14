@@ -1,0 +1,9 @@
+{
+  "name": "59d0743_wasm_o2_memgrowth",
+  "type": 2,
+  "flags":[
+    "-O2",
+    "-s ALLOW_MEMORY_GROWTH=1"
+  ],
+  "emscripten": "1.38.10"
+}

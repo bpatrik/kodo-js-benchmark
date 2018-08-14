@@ -103,7 +103,7 @@ export class Benchmark {
     //  const encoding_rate = encodedBytes / encodingTime;
 
     const start_decoding = window.performance.now();
-    let used_packets = 0;
+    let used_packets;
 
     for (used_packets = 0; used_packets < payload_count; used_packets++) {
       if (decoder.is_complete()) {

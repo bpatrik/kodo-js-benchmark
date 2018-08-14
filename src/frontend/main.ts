@@ -52,6 +52,10 @@ const setStatus = (str) => {
   console.log(str);
   $('#status').html(str);
 };
+const addError = (str) => {
+  console.log(str);
+  $('#error').append($('<div>').html(str));
+};
 
 const run = async () => {
   const libs = await getLibs();
@@ -71,19 +75,20 @@ const run = async () => {
       for (let k = 0; k < symbols.length; k++) {
         const d = window.performance.now() - start;
         const all = (libs.length * fields.length * symbols.length);
-        const done = (i * fields.length * symbols.length + j * symbols.length + k + 1);
+        const done = (i * fields.length * symbols.length + j * symbols.length + k);
         setStatus('running: ' + libs[i].name + ', ' + fields[j] + ' with ' + symbols[k] + ' symbols ' +
-          '(' + done + '/' + all + ') ellapsed.:' + (d / 1000).toFixed(0) + 's, left: ' + (d / done * all / 1000).toFixed(0) + 's');
+          '(' + done + '/' + all + ') ellapsed.:' + (d / 1000).toFixed(0) + 's, left: ' + (d / done * (all-done) / 1000).toFixed(0) + 's');
         try {
           await runMeasurement(libs[i], fields[j], symbols[k]);
         } catch (err) {
           console.error(err);
-          setStatus('Error: "' + err.toString() + '"');
+          addError('Error: "' + err.toString() + '"');
         }
       }
     }
 
   }
+  setStatus('Done in: ' + ((window.performance.now() - start)/1000) + 's');
 
 
 };

@@ -35,7 +35,7 @@ const loadKodo = (info: LibInfoDTO) => {
     console.log('loading');
 
     window['Module'] = window['Module'] || {};
-    window['Module']['memoryInitializerPrefixURL'] = '/libs/' + info.name;
+    window['Module']['memoryInitializerPrefixURL'] = '/libs/' + info.name + '/';
     const script = document.createElement('script');
     script.type = 'text/javascript';
 

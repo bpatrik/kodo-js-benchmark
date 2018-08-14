@@ -1,0 +1,9 @@
+{
+  "name": "9218964_asm_o2_nodebug",
+  "type": 1,
+  "flags":[
+    "-O2",
+    "--cxx_nodebug"
+  ],
+  "emscripten":"1.37.37"
+}
