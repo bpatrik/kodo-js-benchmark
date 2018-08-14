@@ -11,7 +11,7 @@
         14.80382716907357,
         21.442855586550163
       ],
-      "name": "Chrome_59d0743_asm_o2",
+      "name": "Chrome_59d0743_em38_asm_o2",
       "type": "scatter",
       "line": {
         "dash": "dot",
@@ -45,7 +45,7 @@
         11.574526263924602,
         13.300860276434628
       ],
-      "name": "Chrome_59d0743_asm_o2_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_asm_o2_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dashdot",
@@ -79,7 +79,7 @@
         13.092512342490936,
         16.065071026748477
       ],
-      "name": "Chrome_59d0743_asm_o2_nodebug_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_asm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dash",
@@ -113,7 +113,7 @@
         13.176892398711749,
         16.06272494464394
       ],
-      "name": "Chrome_59d0743_asm_o2_nodebug_memgrowth_memview",
+      "name": "Chrome_59d0743_em38_asm_o2_nodebug_memgrowth_memview",
       "type": "scatter",
       "line": {
         "dash": "solid",
@@ -149,7 +149,7 @@
         18.899553215467467,
         13.854678321886105
       ],
-      "name": "Chrome_59d0743_wasm_o2",
+      "name": "Chrome_59d0743_em38_wasm_o2",
       "type": "scatter",
       "line": {
         "dash": "dot",
@@ -186,7 +186,7 @@
         18.769280236296005,
         15.861939020232025
       ],
-      "name": "Chrome_59d0743_wasm_o2_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_wasm_o2_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dashdot",
@@ -223,7 +223,7 @@
         16.568210381674497,
         16.20652014635874
       ],
-      "name": "Chrome_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_wasm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dash",
@@ -260,7 +260,7 @@
         18.91557833405119,
         15.346062252080502
       ],
-      "name": "Chrome_59d0743_wasm_o2_nodebug_memgrowth_memview",
+      "name": "Chrome_59d0743_em38_wasm_o2_nodebug_memgrowth_memview",
       "type": "scatter",
       "line": {
         "dash": "solid",
@@ -295,7 +295,7 @@
         14.546152969689086,
         16.97147851802501
       ],
-      "name": "Chrome_9218964_asm_o2_nodebug",
+      "name": "Chrome_9218964_em37_asm_o2_nodebug",
       "type": "scatter",
       "line": {
         "dash": "dot",

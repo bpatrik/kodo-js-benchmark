@@ -11,7 +11,7 @@
         0.33840000000236614,
         0.3080999999999676
       ],
-      "name": "Chrome_59d0743_asm_o2",
+      "name": "Chrome_59d0743_em38_asm_o2",
       "type": "scatter",
       "line": {
         "dash": "dot",
@@ -45,7 +45,7 @@
         0.3681000000040058,
         0.369700000002922
       ],
-      "name": "Chrome_59d0743_asm_o2_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_asm_o2_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dashdot",
@@ -79,7 +79,7 @@
         0.27409999999531465,
         0.2800000000002001
       ],
-      "name": "Chrome_59d0743_asm_o2_nodebug_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_asm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dash",
@@ -113,7 +113,7 @@
         0.2800999999853957,
         0.28320000001804146
       ],
-      "name": "Chrome_59d0743_asm_o2_nodebug_memgrowth_memview",
+      "name": "Chrome_59d0743_em38_asm_o2_nodebug_memgrowth_memview",
       "type": "scatter",
       "line": {
         "dash": "solid",
@@ -149,7 +149,7 @@
         0.13979999998946369,
         8.934000000011565
       ],
-      "name": "Chrome_59d0743_wasm_o2",
+      "name": "Chrome_59d0743_em38_wasm_o2",
       "type": "scatter",
       "line": {
         "dash": "dot",
@@ -186,7 +186,7 @@
         0.1386999999976979,
         8.703499999990981
       ],
-      "name": "Chrome_59d0743_wasm_o2_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_wasm_o2_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dashdot",
@@ -223,7 +223,7 @@
         0.14259999999876527,
         8.712899999988622
       ],
-      "name": "Chrome_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "name": "Chrome_59d0743_em38_wasm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dash",
@@ -260,7 +260,7 @@
         0.14399999998568092,
         8.593099999978222
       ],
-      "name": "Chrome_59d0743_wasm_o2_nodebug_memgrowth_memview",
+      "name": "Chrome_59d0743_em38_wasm_o2_nodebug_memgrowth_memview",
       "type": "scatter",
       "line": {
         "dash": "solid",
@@ -295,7 +295,7 @@
         0.1735000002954621,
         17.90689999992901
       ],
-      "name": "Chrome_9218964_asm_o2_nodebug",
+      "name": "Chrome_9218964_em37_asm_o2_nodebug",
       "type": "scatter",
       "line": {
         "dash": "dot",
@@ -329,7 +329,7 @@
         0.415,
         0.441
       ],
-      "name": "Firefox_59d0743_asm_o2",
+      "name": "Firefox_59d0743_em38_asm_o2",
       "type": "scatter",
       "line": {
         "dash": "dot",
@@ -363,7 +363,7 @@
         0.433,
         0.476
       ],
-      "name": "Firefox_59d0743_asm_o2_allow_memgrowth",
+      "name": "Firefox_59d0743_em38_asm_o2_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dashdot",
@@ -397,7 +397,7 @@
         0.44,
         0.425
       ],
-      "name": "Firefox_59d0743_asm_o2_nodebug_allow_memgrowth",
+      "name": "Firefox_59d0743_em38_asm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dash",
@@ -431,7 +431,7 @@
         0.376,
         0.357
       ],
-      "name": "Firefox_59d0743_asm_o2_nodebug_memgrowth_memview",
+      "name": "Firefox_59d0743_em38_asm_o2_nodebug_memgrowth_memview",
       "type": "scatter",
       "line": {
         "dash": "solid",
@@ -467,7 +467,7 @@
         0.186,
         9.467
       ],
-      "name": "Firefox_59d0743_wasm_o2",
+      "name": "Firefox_59d0743_em38_wasm_o2",
       "type": "scatter",
       "line": {
         "dash": "dot",
@@ -504,7 +504,7 @@
         0.19,
         9.401
       ],
-      "name": "Firefox_59d0743_wasm_o2_allow_memgrowth",
+      "name": "Firefox_59d0743_em38_wasm_o2_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dashdot",
@@ -541,7 +541,7 @@
         0.192,
         9.383
       ],
-      "name": "Firefox_59d0743_wasm_o2_nodebug_allow_memgrowth",
+      "name": "Firefox_59d0743_em38_wasm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
         "dash": "dash",
@@ -578,7 +578,7 @@
         0.158,
         8.123
       ],
-      "name": "Firefox_59d0743_wasm_o2_nodebug_memgrowth_memview",
+      "name": "Firefox_59d0743_em38_wasm_o2_nodebug_memgrowth_memview",
       "type": "scatter",
       "line": {
         "dash": "solid",
@@ -613,7 +613,7 @@
         0.241,
         24.785
       ],
-      "name": "Firefox_9218964_asm_o2_nodebug",
+      "name": "Firefox_9218964_em37_asm_o2_nodebug",
       "type": "scatter",
       "line": {
         "dash": "dot",

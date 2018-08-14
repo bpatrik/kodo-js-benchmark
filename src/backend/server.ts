@@ -42,7 +42,9 @@ export class Server {
     this.app.get('/api/libs', (req: Request, res: Response, next: NextFunction) => {
       const isDirectory = s => fs.lstatSync(s).isDirectory();
       const list: LibInfoDTO[] = fs.readdirSync(ProjectPath.LibsFolder).map(name => path.join(ProjectPath.LibsFolder, name)).filter(isDirectory).map(s => {
-        return require(s + '/info.json');
+        const info = require(s + '/info.json');
+        info.name = name;
+        return info;
       });
       return res.send(list.filter(l => l.name.indexOf('9218964') != -1));
     });
