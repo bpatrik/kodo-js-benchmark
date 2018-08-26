@@ -41,10 +41,11 @@ export class Renderer {
     }
     if (log.lib.flags.indexOf('-O2') != -1 &&
       log.lib.flags.indexOf('--cxx_nodebug') != -1 &&
-      log.lib.flags.indexOf('-s ALLOW_MEMORY_GROWTH=1') != -1) {
+      log.lib.withMemoryView === true) {
       return 'dash';
     }
     if (log.lib.flags.indexOf('-O2') != -1 &&
+      log.lib.flags.indexOf('--cxx_nodebug') != -1 &&
       log.lib.flags.indexOf('-s ALLOW_MEMORY_GROWTH=1') != -1) {
       return 'dashdot';
     }
@@ -77,7 +78,7 @@ export class Renderer {
         line: {
           dash: this.getLineDash(input.logs[i]),
           color: this.getColor(input.logs[i]),
-          width: 4
+          width: 2
         },
         marker: {
           symbol: this.getMarkers(input.logs[i]),

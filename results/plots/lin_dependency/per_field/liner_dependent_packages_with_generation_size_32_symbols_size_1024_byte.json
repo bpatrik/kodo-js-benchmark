@@ -2,89 +2,21 @@
   "data": [
     {
       "x": [
-        2,
+        4,
         8,
-        4
+        2
       ],
       "y": [
-        1.05053125,
-        1.00021875,
-        1.00253125
-      ],
-      "name": "Chrome_59d0743_em38_asm_o2",
-      "type": "scatter",
-      "line": {
-        "dash": "dot",
-        "color": "darkgreen",
-        "width": 4
-      },
-      "marker": {
-        "symbol": "circle",
-        "color": "darkgreen",
-        "size": 10
-      },
-      "error_y": {
-        "type": "data",
-        "array": [
-          0.050061592922493986,
-          0.0026053955433868385,
-          0.00929334229098982
-        ],
-        "visible": true,
-        "color": "darkgreen"
-      }
-    },
-    {
-      "x": [
-        2,
-        4,
-        8
-      ],
-      "y": [
-        1.04784375,
-        1.00228125,
-        1.0001875
-      ],
-      "name": "Chrome_59d0743_em38_asm_o2_memgrowth",
-      "type": "scatter",
-      "line": {
-        "dash": "dashdot",
-        "color": "darkgreen",
-        "width": 4
-      },
-      "marker": {
-        "symbol": "circle",
-        "color": "darkgreen",
-        "size": 10
-      },
-      "error_y": {
-        "type": "data",
-        "array": [
-          0.050107686769970856,
-          0.008930668280565575,
-          0.002413341822038478
-        ],
-        "visible": true,
-        "color": "darkgreen"
-      }
-    },
-    {
-      "x": [
-        2,
-        4,
-        8
-      ],
-      "y": [
-        1.04909375,
         1.0018125,
-        1.00009375
+        1.00009375,
+        1.04909375
       ],
       "name": "Chrome_59d0743_em38_asm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
-        "dash": "dash",
+        "dash": "dashdot",
         "color": "darkgreen",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "circle",
@@ -94,8 +26,42 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.04906308717801511,
           0.007695118176480459,
+          0.0017090636142344144,
+          0.04906308717801511
+        ],
+        "visible": true,
+        "color": "darkgreen"
+      }
+    },
+    {
+      "x": [
+        2,
+        4,
+        8
+      ],
+      "y": [
+        1.0489375,
+        1.0026875,
+        1.00009375
+      ],
+      "name": "Chrome_59d0743_em38_asm_o2_nodebug_memgrowth_memview",
+      "type": "scatter",
+      "line": {
+        "dash": "solid",
+        "color": "darkgreen",
+        "width": 2
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkgreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          0.04936752316807049,
+          0.00940640572960789,
           0.0017090636142344144
         ],
         "visible": true,
@@ -109,16 +75,16 @@
         8
       ],
       "y": [
-        1.05134375,
-        1.00253125,
+        1.04971875,
+        1.0019375,
         1.00015625
       ],
-      "name": "Chrome_59d0743_em38_asm_o2_nodebug_memgrowth_memview",
+      "name": "Chrome_59d0743_em38_asm_o2_nodebug_memview",
       "type": "scatter",
       "line": {
-        "dash": "solid",
+        "dash": "dash",
         "color": "darkgreen",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "circle",
@@ -128,86 +94,12 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.05267781457537403,
-          0.009080746716955601,
+          0.05254944658069676,
+          0.007790970334303679,
           0.002204177496822794
         ],
         "visible": true,
         "color": "darkgreen"
-      }
-    },
-    {
-      "x": [
-        2,
-        4,
-        8,
-        16
-      ],
-      "y": [
-        1.05103125,
-        1.00253125,
-        1.00009375,
-        1
-      ],
-      "name": "Chrome_59d0743_em38_wasm_o2",
-      "type": "scatter",
-      "line": {
-        "dash": "dot",
-        "color": "darkblue",
-        "width": 4
-      },
-      "marker": {
-        "symbol": "circle",
-        "color": "darkblue",
-        "size": 10
-      },
-      "error_y": {
-        "type": "data",
-        "array": [
-          0.05223810233859496,
-          0.008972560166279186,
-          0.0017090636142344144,
-          0
-        ],
-        "visible": true,
-        "color": "darkblue"
-      }
-    },
-    {
-      "x": [
-        2,
-        4,
-        8,
-        16
-      ],
-      "y": [
-        1.04971875,
-        1.00190625,
-        1.00021875,
-        1
-      ],
-      "name": "Chrome_59d0743_em38_wasm_o2_memgrowth",
-      "type": "scatter",
-      "line": {
-        "dash": "dashdot",
-        "color": "darkblue",
-        "width": 4
-      },
-      "marker": {
-        "symbol": "circle",
-        "color": "darkblue",
-        "size": 10
-      },
-      "error_y": {
-        "type": "data",
-        "array": [
-          0.04897104334132062,
-          0.007735811104047204,
-          0.0026053955433868385,
-          0
-        ],
-        "visible": true,
-        "color": "darkblue"
       }
     },
     {
@@ -226,9 +118,9 @@
       "name": "Chrome_59d0743_em38_wasm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
-        "dash": "dash",
+        "dash": "dashdot",
         "color": "darkblue",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "circle",
@@ -255,9 +147,9 @@
         16
       ],
       "y": [
-        1.04990625,
+        1.0489375,
         1.00225,
-        1.00003125,
+        1.00015625,
         1
       ],
       "name": "Chrome_59d0743_em38_wasm_o2_nodebug_memgrowth_memview",
@@ -265,7 +157,7 @@
       "line": {
         "dash": "solid",
         "color": "darkblue",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "circle",
@@ -275,9 +167,9 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.0516390624763609,
-          0.008661156100660003,
-          0.0009877175393299444,
+          0.052474361299114265,
+          0.008432637487761465,
+          0.002204177496822794,
           0
         ],
         "visible": true,
@@ -300,7 +192,7 @@
       "line": {
         "dash": "dot",
         "color": "darkgreen",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "circle",
@@ -325,74 +217,6 @@
         8
       ],
       "y": [
-        1.04915625,
-        1.00240625,
-        1.00009375
-      ],
-      "name": "Firefox_59d0743_em38_asm_o2",
-      "type": "scatter",
-      "line": {
-        "dash": "dot",
-        "color": "limegreen",
-        "width": 4
-      },
-      "marker": {
-        "symbol": "square",
-        "color": "limegreen",
-        "size": 10
-      },
-      "error_y": {
-        "type": "data",
-        "array": [
-          0.05211045023253512,
-          0.009221186118797303,
-          0.0017090636142344144
-        ],
-        "visible": true,
-        "color": "limegreen"
-      }
-    },
-    {
-      "x": [
-        2,
-        4,
-        8
-      ],
-      "y": [
-        1.051,
-        1.001875,
-        1.00015625
-      ],
-      "name": "Firefox_59d0743_em38_asm_o2_memgrowth",
-      "type": "scatter",
-      "line": {
-        "dash": "dashdot",
-        "color": "limegreen",
-        "width": 4
-      },
-      "marker": {
-        "symbol": "square",
-        "color": "limegreen",
-        "size": 10
-      },
-      "error_y": {
-        "type": "data",
-        "array": [
-          0.05389674735083735,
-          0.0075519037334966085,
-          0.002204177496822794
-        ],
-        "visible": true,
-        "color": "limegreen"
-      }
-    },
-    {
-      "x": [
-        2,
-        4,
-        8
-      ],
-      "y": [
         1.051375,
         1.00284375,
         1.00015625
@@ -400,9 +224,9 @@
       "name": "Firefox_59d0743_em38_asm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
-        "dash": "dash",
+        "dash": "dashdot",
         "color": "limegreen",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "square",
@@ -427,8 +251,8 @@
         8
       ],
       "y": [
-        1.0479375,
-        1.002125,
+        1.05065625,
+        1.00209375,
         1.00009375
       ],
       "name": "Firefox_59d0743_em38_asm_o2_nodebug_memgrowth_memview",
@@ -436,7 +260,7 @@
       "line": {
         "dash": "solid",
         "color": "limegreen",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "square",
@@ -446,8 +270,8 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.05216825992641511,
-          0.008231038816577167,
+          0.05202312248834638,
+          0.008298096073045911,
           0.0017090636142344144
         ],
         "visible": true,
@@ -456,76 +280,36 @@
     },
     {
       "x": [
-        4,
         2,
-        8,
-        16
+        4,
+        8
       ],
       "y": [
-        1.00165625,
-        1.0494375,
-        1.00025,
-        1
+        1.0520625,
+        1.0020625,
+        1.00009375
       ],
-      "name": "Firefox_59d0743_em38_wasm_o2",
+      "name": "Firefox_59d0743_em38_asm_o2_nodebug_memview",
       "type": "scatter",
       "line": {
-        "dash": "dot",
-        "color": "royalblue",
-        "width": 4
+        "dash": "dash",
+        "color": "limegreen",
+        "width": 2
       },
       "marker": {
         "symbol": "square",
-        "color": "royalblue",
+        "color": "limegreen",
         "size": 10
       },
       "error_y": {
         "type": "data",
         "array": [
-          0.007407700279945182,
-          0.05072979123503253,
-          0.003114983948594278,
-          0
+          0.05432867998350382,
+          0.008246921774213703,
+          0.0017090636142344144
         ],
         "visible": true,
-        "color": "royalblue"
-      }
-    },
-    {
-      "x": [
-        2,
-        4,
-        8,
-        16
-      ],
-      "y": [
-        1.050625,
-        1.00259375,
-        1.00003125,
-        1
-      ],
-      "name": "Firefox_59d0743_em38_wasm_o2_memgrowth",
-      "type": "scatter",
-      "line": {
-        "dash": "dashdot",
-        "color": "royalblue",
-        "width": 4
-      },
-      "marker": {
-        "symbol": "square",
-        "color": "royalblue",
-        "size": 10
-      },
-      "error_y": {
-        "type": "data",
-        "array": [
-          0.05174305508954821,
-          0.008621319413958644,
-          0.0009877175393299444,
-          0
-        ],
-        "visible": true,
-        "color": "royalblue"
+        "color": "limegreen"
       }
     },
     {
@@ -544,9 +328,9 @@
       "name": "Firefox_59d0743_em38_wasm_o2_nodebug_memgrowth",
       "type": "scatter",
       "line": {
-        "dash": "dash",
+        "dash": "dashdot",
         "color": "royalblue",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "square",
@@ -573,9 +357,9 @@
         16
       ],
       "y": [
-        1.05028125,
-        1.002,
-        1.00021875,
+        1.0518125,
+        1.0018125,
+        1.00009375,
         1
       ],
       "name": "Firefox_59d0743_em38_wasm_o2_nodebug_memgrowth_memview",
@@ -583,7 +367,7 @@
       "line": {
         "dash": "solid",
         "color": "royalblue",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "square",
@@ -593,9 +377,9 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.05191751834340226,
-          0.00802242949486002,
-          0.0026053955433868385,
+          0.05335461408116454,
+          0.007695118176480459,
+          0.0017090636142344144,
           0
         ],
         "visible": true,
@@ -618,7 +402,7 @@
       "line": {
         "dash": "dot",
         "color": "limegreen",
-        "width": 4
+        "width": 2
       },
       "marker": {
         "symbol": "square",

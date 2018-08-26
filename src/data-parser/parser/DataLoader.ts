@@ -5,6 +5,12 @@ import {LogDTO} from '../../common/LogDTO';
 
 export class DataLoader {
 
+  public static loadFolder(): LogDTO[] {
+    const resultFileList = fs.readdirSync(ProjectPath.LogFolder).filter(i => path.extname(i) === '.jsonx');
+    const logs = resultFileList.map(f => this.loadResult(f));
+    return [].concat.apply([], logs);
+  }
+
   public static loadResult(file: string): LogDTO[] {
 
     console.log('Reading file:' + file);

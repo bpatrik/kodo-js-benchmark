@@ -43,10 +43,10 @@ export class Server {
       const isDirectory = s => fs.lstatSync(s).isDirectory();
       const list: LibInfoDTO[] = fs.readdirSync(ProjectPath.LibsFolder).map(name => path.join(ProjectPath.LibsFolder, name)).filter(isDirectory).map(s => {
         const info = require(s + '/info.json');
-        info.name = name;
+        info.name = path.basename(s);
         return info;
       });
-      return res.send(list.filter(l => l.name.indexOf('9218964') != -1));
+      return res.send(list.filter(l => l.name.indexOf('memview') != -1));
     });
 
     const fileLogger = new StatisticFileLogger();

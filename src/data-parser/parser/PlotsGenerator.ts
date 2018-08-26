@@ -16,7 +16,13 @@ export class PlotsGenerator {
 
 
   }
-
+  logToFiledSize = (l: LogDTO) => {
+    const ret = l.results.settings.field.match(/\d+$/);
+    if (ret) {
+      return parseInt(ret[0], 10);
+    }
+    return 2;
+  };
   perSymbols() {
     this.xFn = (l: LogDTO) => {
       return l.results.settings.symbols;
@@ -25,20 +31,22 @@ export class PlotsGenerator {
     const fields = Utils.Set.getUnique(this.logs.map(l => l.results.settings.field));
     this.names = fields;
     this.filteredLogs = fields.map(f => this.logs.filter(l => l.results.settings.field === f));
+      this.filteredLogs.forEach(fl => fl.sort((a, b) => {
+      return this.logToFiledSize(a) - this.logToFiledSize(b);
+    }));
   }
 
   perField() {
-    this.xFn = (l: LogDTO) => {
-      const ret = l.results.settings.field.match(/\d+$/);
-      if (ret) {
-        return parseInt(ret[0], 10);
-      }
-      return 2;
-    };
+
+
+    this.xFn = this.logToFiledSize;
     this.xAxis = 'filed size';
     const symbols = Utils.Set.getUnique(this.logs.map(l => l.results.settings.symbols));
     this.names = symbols.map(v => 'generation size: ' + v);
     this.filteredLogs = symbols.map(s => this.logs.filter(l => l.results.settings.symbols === s));
+    this.filteredLogs.forEach(fl => fl.sort((a, b) => {
+      return a.results.settings.symbols - b.results.settings.symbols;
+    }));
   }
 
 
@@ -97,8 +105,8 @@ export class PlotsGenerator {
     return plts.filter(plt => plt.data.length > 0);
   }
 
-  renderLindDepencency(): IPlotable[] {
-    console.log('generating renderLindDepencency');
+  renderLindDependency(): IPlotable[] {
+    console.log('generating renderLindDependency');
     const plts = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];

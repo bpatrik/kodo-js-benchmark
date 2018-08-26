@@ -76,7 +76,7 @@ export class Benchmark {
     // We measure pure coding, so we always turn off the systematic mode
     encoder.set_systematic_off();
 
-    const payloads: string[] = [];
+    const payloads: em_string_type[] = [];
     let payload_count = Math.max(2 * Math.max(this.symbols, 8), 10);
     if (KODO.field[this.field] === KODO.field.binary) {
       payload_count *= 2;
@@ -84,17 +84,12 @@ export class Benchmark {
 
     const start_encoding = window.performance.now();
 
-    if (this.useMemView) { //for emscripten memory view, you should slice
-      for (let i = 0; i < payload_count; i++) {
-        const payload = encoder.write_payload().slice();
-        payloads.push(payload);
-      }
-    } else { //it returns with string
-      for (let i = 0; i < payload_count; i++) {
-        const payload = encoder.write_payload();
-        payloads.push(payload);
-      }
+
+    for (let i = 0; i < payload_count; i++) {
+      const payload: em_string_type = encoder.write_payload();
+      payloads.push(payload);
     }
+
 
     const encoding_time = window.performance.now() - start_encoding;
 
@@ -112,11 +107,15 @@ export class Benchmark {
       decoder.read_payload(payloads[used_packets]);
     }
 
-    const data_out = decoder.copy_from_symbols();
+    let data_out = decoder.copy_from_symbols();
     const decoding_time = window.performance.now() - start_decoding;
 
     if (!decoder.is_complete()) {
       throw new Error('Could not decode, rank:' + decoder.rank() + ' with packets: ' + used_packets);
+    }
+
+    if (this.useMemView) {
+      data_out = (new TextDecoder()).decode(data_out);
     }
 
 
