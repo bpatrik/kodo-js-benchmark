@@ -64,8 +64,8 @@ const run = async () => {
 
 
   const start = window.performance.now();
- // const fields = ['binary', 'binary4', 'binary8', 'binary16'];
-  const fields = ['binary8'];
+  const fields = ['binary', 'binary4', 'binary8', 'binary16'];
+  //const fields = ['binary8'];
 
   const symbols = [2, 4, 8, 16, 32, 64];
 

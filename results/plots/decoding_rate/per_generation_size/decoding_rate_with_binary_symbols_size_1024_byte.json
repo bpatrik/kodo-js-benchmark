@@ -215,6 +215,92 @@
     },
     {
       "x": [
+        16,
+        16,
+        32,
+        32,
+        64,
+        64
+      ],
+      "y": [
+        37.423269079836516,
+        37.423269079836516,
+        25.14111205957751,
+        25.14111205957751,
+        14.912213613728674,
+        14.912213613728674
+      ],
+      "name": "Chrome_9218964_em38_asm_o2_nodebug_memview",
+      "type": "scatter",
+      "line": {
+        "dash": "dash",
+        "color": "darkgreen",
+        "width": 2
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkgreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          9.137693073733292,
+          9.137693073733292,
+          3.423783170989824,
+          3.423783170989824,
+          1.5456620000872152,
+          1.5456620000872152
+        ],
+        "visible": true,
+        "color": "darkgreen"
+      }
+    },
+    {
+      "x": [
+        16,
+        16,
+        32,
+        32,
+        64,
+        64
+      ],
+      "y": [
+        33.84965260586279,
+        33.84965260586279,
+        22.656512638673068,
+        22.656512638673068,
+        13.376416000199345,
+        13.376416000199345
+      ],
+      "name": "Chrome_9218964_em38_wasm_o2_nodebug_memview",
+      "type": "scatter",
+      "line": {
+        "dash": "dash",
+        "color": "darkblue",
+        "width": 2
+      },
+      "marker": {
+        "symbol": "circle",
+        "color": "darkblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          8.254770325243003,
+          8.254770325243003,
+          2.9059150185439577,
+          2.9059150185439577,
+          1.0801511229351255,
+          1.0801511229351255
+        ],
+        "visible": true,
+        "color": "darkblue"
+      }
+    },
+    {
+      "x": [
         32,
         64
       ],
@@ -383,6 +469,68 @@
         "visible": true,
         "color": "limegreen"
       }
+    },
+    {
+      "x": [
+        64,
+        64
+      ],
+      "y": [
+        21.1539809523811,
+        21.1539809523811
+      ],
+      "name": "Firefox_9218964_em38_asm_o2_nodebug_memview",
+      "type": "scatter",
+      "line": {
+        "dash": "dash",
+        "color": "limegreen",
+        "width": 2
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "limegreen",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          5.000583982005343,
+          5.000583982005343
+        ],
+        "visible": true,
+        "color": "limegreen"
+      }
+    },
+    {
+      "x": [
+        64,
+        64
+      ],
+      "y": [
+        21.054933333333494,
+        21.054933333333494
+      ],
+      "name": "Firefox_9218964_em38_wasm_o2_nodebug_memview",
+      "type": "scatter",
+      "line": {
+        "dash": "dash",
+        "color": "royalblue",
+        "width": 2
+      },
+      "marker": {
+        "symbol": "square",
+        "color": "royalblue",
+        "size": 10
+      },
+      "error_y": {
+        "type": "data",
+        "array": [
+          5.054568461193134,
+          5.054568461193134
+        ],
+        "visible": true,
+        "color": "royalblue"
+      }
     }
   ],
   "layout": {
@@ -394,7 +542,7 @@
     "yaxis": {
       "range": [
         0,
-        51.00794467675518
+        51.217058368926786
       ],
       "zeroline": true,
       "title": "Decoding rate [MB/s]"

@@ -22,6 +22,7 @@ emscripten::val coder_write_payload(Coder& coder)
 }
 
 ```
+We also applied the method for all of the function that returns with a `std::string`.
 
 ## Environment
 Win 10. x62  

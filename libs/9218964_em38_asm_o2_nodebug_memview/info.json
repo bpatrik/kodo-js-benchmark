@@ -1,0 +1,10 @@
+{
+  "name": "9218964_asm_o2_nodebug_memview",
+  "type": 1,
+  "flags":[
+    "-O2",
+    "--cxx_nodebug"
+  ],
+  "withMemoryView":true,
+  "emscripten": "1.38.10"
+}

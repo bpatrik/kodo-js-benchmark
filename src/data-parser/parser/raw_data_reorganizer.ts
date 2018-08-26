@@ -5,7 +5,7 @@ import * as path from 'path';
 import {ProjectPath} from '../../backend/ProjectPath';
 import {EnvionmentType} from '../../common/LogDTO';
 
-const results = DataLoader.loadResult('log_20180826-144810.jsonx');
+const results = DataLoader.loadResult('log_20180826-162450.jsonx');
 const types = Utils.Set.getUnique(results.map(r => r.lib.name));
 const browsers = [EnvionmentType.Chrome, EnvionmentType.Firefox];
 for (let i = 0; i < types.length; i++) {
