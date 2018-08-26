@@ -31,8 +31,8 @@ export class PlotsGenerator {
     const fields = Utils.Set.getUnique(this.logs.map(l => l.results.settings.field));
     this.names = fields;
     this.filteredLogs = fields.map(f => this.logs.filter(l => l.results.settings.field === f));
-      this.filteredLogs.forEach(fl => fl.sort((a, b) => {
-      return this.logToFiledSize(a) - this.logToFiledSize(b);
+    this.filteredLogs.forEach(fl => fl.sort((a, b) => {
+      return a.results.settings.symbols - b.results.settings.symbols;
     }));
   }
 
@@ -44,8 +44,9 @@ export class PlotsGenerator {
     const symbols = Utils.Set.getUnique(this.logs.map(l => l.results.settings.symbols));
     this.names = symbols.map(v => 'generation size: ' + v);
     this.filteredLogs = symbols.map(s => this.logs.filter(l => l.results.settings.symbols === s));
+
     this.filteredLogs.forEach(fl => fl.sort((a, b) => {
-      return a.results.settings.symbols - b.results.settings.symbols;
+      return this.logToFiledSize(a) - this.logToFiledSize(b);
     }));
   }
 
@@ -55,7 +56,7 @@ export class PlotsGenerator {
     const plts = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];
-      logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
+   //   logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
       plts.push(Renderer.renderLine(
         {
           logs: logs,
@@ -83,7 +84,7 @@ export class PlotsGenerator {
     const plts = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];
-      logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
+    //  logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
       plts.push(Renderer.renderLine(
         {
           logs: logs,
@@ -110,7 +111,7 @@ export class PlotsGenerator {
     const plts = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];
-      logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
+   //   logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
       plts.push(Renderer.renderLine(
         {
           logs: logs,
@@ -137,7 +138,7 @@ export class PlotsGenerator {
     const plts = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];
-      logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
+   //   logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
       plts.push(Renderer.renderLine(
         {
           logs: logs,
@@ -165,7 +166,7 @@ export class PlotsGenerator {
     const plts: IPlotable[] = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];
-      logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
+    //  logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
 
       plts.push(Renderer.renderLine(
         {
@@ -194,7 +195,7 @@ export class PlotsGenerator {
     const plts = [];
     for (let i = 0; i < this.filteredLogs.length; i++) {
       let logs = this.filteredLogs[i];
-      logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
+   //   logs = logs.sort((a: LogDTO, b: LogDTO) => a.results.settings.symbols - b.results.settings.symbols);
       plts.push(Renderer.renderLine(
         {
           logs: logs,

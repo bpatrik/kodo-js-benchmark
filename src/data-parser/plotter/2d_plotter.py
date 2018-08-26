@@ -55,7 +55,7 @@ def plot(filename):
     if 'line' in value and 'color' in value['line']:
       color = value['line']['color']
       hsv = mcolors.rgb_to_hsv(mcolors.to_rgb(colors[color]))
-      hsv[1] = max(hsv[1] - 0.6, 0)
+      hsv[1] = max(hsv[1] - 0.3, 0)
       ecolor = mcolors.hsv_to_rgb(hsv)
 
     error_bars = None

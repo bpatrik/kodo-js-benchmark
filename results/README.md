@@ -12,11 +12,15 @@ See all results in the `plots/` folder.
 ```C++
 template<class Coder>
 emscripten::val coder_write_payload(Coder& coder)
-{
-    std::vector<uint8_t> payload(coder.payload_size());
-    coder.write_payload(payload.data());
-	  return emscripten::val(emscripten::typed_memory_view(payload.size(), payload.data()));
+{	
+   std::vector<uint8_t> payload(coder.payload_size());
+   uint32_t length = coder.write_payload(payload.data());    
+   
+   emscripten::val heap = emscripten::val::module_property("buffer");
+   emscripten::val payload_view = emscripten::val::global("Uint8Array").new_( heap, reinterpret_cast<uintptr_t>(payload.data()), length);
+   return payload_view.call<emscripten::val>("slice");
 }
+
 ```
 
 ## Environment
@@ -67,9 +71,6 @@ There is a higher chance of generating linearly dependent packets, with lower ge
 ## Verdict
 
 WebAssembly seems to be a good choice, while using memory view can further improve the performance.
-An important note, that using memory view might lead to unexpected behaviour (also depending on the current bug level of emscripten),
-since one can directly access the memory of the compiled c++ binary.  
-We found that using multiple encoder and decoder factories whit calling `encoder.delete()` `decoder.delete()` causes instability.
 The results (or the lack of data) also show that using `binary16` had the most errors.
-An nteresting outcome is that our older `kodo` built performs reasonably well in terms of coding speed, but the setup time is significantly longer.
+An interesting outcome is that our older `kodo` built performs reasonably well in terms of coding speed, but the setup time is significantly longer.
 Further investigation is required to see if its the results of the new `kodo` or the new `emscripten`.

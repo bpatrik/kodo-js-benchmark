@@ -348,10 +348,12 @@
     },
     {
       "x": [
+        32,
         64
       ],
       "y": [
-        9.20046637806631
+        17.602133333333338,
+        8.934663203463128
       ],
       "name": "Firefox_59d0743_em38_wasm_o2_nodebug_memgrowth_memview",
       "type": "scatter",
@@ -368,7 +370,8 @@
       "error_y": {
         "type": "data",
         "array": [
-          0.933540212206488
+          6.640460150053243,
+          1.0055403147205912
         ],
         "visible": true,
         "color": "royalblue"

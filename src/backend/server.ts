@@ -46,7 +46,7 @@ export class Server {
         info.name = path.basename(s);
         return info;
       });
-      return res.send(list.filter(l => l.name.indexOf('memview') != -1));
+      return res.send(list.filter(l => l.name.indexOf('59d0743_em38_wasm_o2_nodebug_memgrowth_memview') != -1));
     });
 
     const fileLogger = new StatisticFileLogger();
